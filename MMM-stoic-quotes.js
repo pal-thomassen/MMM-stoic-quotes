@@ -1,7 +1,7 @@
 Module.register("MMM-stoic-quotes", {
     defaults: {
         size: "small",
-        time: 24 * 60 * 1000
+        time: 24 * 60 * 60 * 1000
     },
     start: function () {
         setInterval(() => {

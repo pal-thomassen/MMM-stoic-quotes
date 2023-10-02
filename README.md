@@ -33,7 +33,7 @@ Not many options, but some.
 | Option | Description | Default value | Possible values |
 |--------|-------------|---------------|-----------------|
 | size   | The size of the modules. Both width and font size | "small" | "xsmall", "small", "medium", "large", "xlarge" |
-| time   | The time before fetching a new quote in milliseconds| Once every 24h | Can be any number in milliseconds, for example 60 * 1000 for every hour |
+| time   | The time before fetching a new quote in milliseconds| Once every 24h | Can be any number in milliseconds, for example 60 * 60 * 1000 for every hour |
 
 ## Example config.js
 
@@ -45,7 +45,7 @@ An example config.js configuration. This would fetch a new quote once every hour
 	position: "top_left",
 	config: {
 		size: "small",
-		time: 60 * 1000
+		time: 60 * 60 * 1000
 	}
 }
 ```
