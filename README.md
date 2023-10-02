@@ -14,7 +14,7 @@ In your magic mirror directory
 
 ```bash
 cd modules
-git clone 
+git clone https://github.com/pal-thomassen/MMM-stoic-quotes.git
 ```
 
 ## Updating the module
