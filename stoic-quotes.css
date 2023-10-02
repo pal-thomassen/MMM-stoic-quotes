@@ -1,0 +1,24 @@
+.stoic-quotes {
+    height: auto;
+    max-height: auto;
+    line-height: 1em;
+}
+.stoic-quotes.xsmall {
+    max-width: 30vh;
+}
+
+.stoic-quotes.small {
+    max-width: 40vh;
+}
+
+.stoic-quotes.medium {
+    max-width: 50vh;
+}
+
+.stoic-quotes.large {
+    max-width: 70vh;
+}
+
+.stoic-quotes.xlarge {
+    max-width: 100vh;
+}
