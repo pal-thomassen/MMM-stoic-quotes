@@ -33,7 +33,10 @@ Not many options, but some.
 | Option | Description | Default value | Possible values |
 |--------|-------------|---------------|-----------------|
 | size   | The size of the modules. Both width and font size | "small" | "xsmall", "small", "medium", "large", "xlarge" |
-| time   | The time before fetching a new quote in milliseconds| Once every 24h | Can be any number in milliseconds, for example 60 * 60 * 1000 for every hour |
+| interval   | The interval before fetching a new quote in milliseconds | Once every 24h | Can be any number in milliseconds, for example 60 * 60 * 1000 for every hour |
+| runAtHour | Configures the module to fetch a quote at the apropriate hour. For example 2 will configure it to fetch a new quote at 02:00 daily | undefined | 0-23 |
+
+When rutAtHour is set the interval configuration will be ignored.
 
 ## Example config.js
 
