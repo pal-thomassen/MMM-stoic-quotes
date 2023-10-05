@@ -5,7 +5,7 @@ Module.register("MMM-stoic-quotes", {
     runAtHour: undefined
   },
   start: function() {
-    if (runAtHour === undefined) {
+    if (this.config.runAtHour === undefined) {
       setInterval(() => {
         this.updateDom()
       }, this.config.interval)
