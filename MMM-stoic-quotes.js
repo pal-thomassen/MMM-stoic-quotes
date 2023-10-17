@@ -17,6 +17,7 @@ Module.register("MMM-stoic-quotes", {
     return ["stoic-quotes.css"]
   },
   getDom: async function() {
+    Log.debug("Updating DOM")
     const quote = await this.fetchQuote();
 
     const element = document.createElement("div")
@@ -40,6 +41,7 @@ Module.register("MMM-stoic-quotes", {
   runAtTime: function(func, targetHour) {
     const now = new Date()
     const delay = calculateRunningTime(now, targetHour)
+    Log.debug(`Setting delay for stoic quotes to be ${delay}`)
     setTimeout(() => {
       func()
       runAtTime(func, targetHour)
