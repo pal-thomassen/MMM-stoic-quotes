@@ -44,7 +44,7 @@ Module.register("MMM-stoic-quotes", {
     Log.debug(`Setting delay for stoic quotes to be ${delay}`)
     setTimeout(() => {
       func()
-      runAtTime(func, targetHour)
+      this.runAtTime(func, targetHour)
     }, delay)
   },
 
