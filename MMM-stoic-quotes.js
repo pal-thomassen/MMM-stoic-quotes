@@ -40,7 +40,7 @@ Module.register("MMM-stoic-quotes", {
   },
   runAtTime: function(func, targetHour) {
     const now = new Date()
-    const delay = calculateRunningTime(now, targetHour)
+    const delay = this.calculateRunningTime(now, targetHour)
     Log.info(`Setting delay for stoic quotes to be ${delay}`)
     setTimeout(() => {
       func()
