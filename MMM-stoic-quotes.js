@@ -10,7 +10,7 @@ Module.register("MMM-stoic-quotes", {
         this.updateDom()
       }, this.config.interval)
     } else {
-      this.runAtTime(this.updateDom, this.config.runAtHour)
+      this.runAtTime(this.config.runAtHour)
     }
   },
   getStyles: function() {
@@ -38,12 +38,12 @@ Module.register("MMM-stoic-quotes", {
     return element
 
   },
-  runAtTime: function(func, targetHour) {
+  runAtTime: function(targetHour) {
     const now = new Date()
     const delay = this.calculateRunningTime(now, targetHour)
     Log.info(`Setting delay for stoic quotes to be ${delay}`)
     setTimeout(() => {
-      func()
+      this.updateDom()
       this.runAtTime(func, targetHour)
     }, delay)
   },
