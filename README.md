@@ -1,8 +1,8 @@
 # MMM-stoic-quotes
 
-A module which uses the open API from https://github.com/benhoneywill/stoic-quotes to fetch a random quote. 
+A [MagicMirror²](https://magicmirror.builders/) module which uses the open API from <https://github.com/benhoneywill/stoic-quotes> to fetch a random quote.
 
-The modules does not depend on any 3rd party packages. 
+The modules does not depend on any 3rd party packages.
 
 ![Whole mirror with quote on upper left](screenshot%20whole%20mirror.png)
 
@@ -10,16 +10,16 @@ The modules does not depend on any 3rd party packages.
 
 ## Installing
 
-In your magic mirror directory 
+In your magic mirror directory:
 
 ```bash
 cd modules
-git clone https://github.com/pal-thomassen/MMM-stoic-quotes.git
+git clone https://github.com/pal-thomassen/MMM-stoic-quotes
 ```
 
 ## Updating the module
 
-In your magic mirror directory. This will pull the latest code from github. 
+In your magic mirror directory. This will pull the latest code from github.
 
 ```bash
 cd modules/MMM-stoic-quotes
@@ -54,4 +54,5 @@ An example config.js configuration. This would fetch a new quote once every hour
 ```
 
 ## Contributing
+
 If you find any issues, or would like to participate. Just open an issue or pull request in this repository.
