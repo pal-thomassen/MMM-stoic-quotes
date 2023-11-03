@@ -10,7 +10,7 @@ The modules does not depend on any 3rd party packages.
 
 ## Installing
 
-In your magic mirror directory:
+In your MagicMirror directory:
 
 ```bash
 cd modules
@@ -19,7 +19,7 @@ git clone https://github.com/pal-thomassen/MMM-stoic-quotes
 
 ## Updating the module
 
-In your magic mirror directory. This will pull the latest code from github.
+In your MagicMirror directory. This will pull the latest code from github.
 
 ```bash
 cd modules/MMM-stoic-quotes
