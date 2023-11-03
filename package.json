@@ -1,7 +1,23 @@
 {
+  "name": "mmm-stoic-quotes",
+  "version": "1.0.0",
+  "description": "A very simple MagicMirror² module to show a daily stoic quote.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pal-thomassen/MMM-stoic-quotes"
+  },
+  "keywords": [
+    "quotes",
+    "quote"
+  ],
+  "author": {
+    "name": "Pål Thomassen",
+    "url": "https://github.com/pal-thomassen"
+  },
   "scripts": {
     "test": "jest"
   },
+  "license": "MIT",
   "devDependencies": {
     "jest": "^29.7.0"
   }
