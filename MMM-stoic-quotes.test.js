@@ -40,3 +40,18 @@ test('expect parse small to return small', () => {
 test('expect parse gibberish to return medium', () => {
   expect(Module.definitions[moduleName].parseSize('sdfsdfdsfnvp23456¤&%')).toBe('medium')
 })
+
+test('fetchQuote calls the www domain directly (apex redirect has no CORS header)', async () => {
+  global.fetch = jest.fn().mockResolvedValue({ ok: true, json: async () => ({ text: "t", author: "a" }) })
+  const quote = await Module.definitions[moduleName].fetchQuote()
+  expect(global.fetch).toHaveBeenCalledWith('https://www.stoic-quotes.com/api/quote')
+  expect(quote).toEqual({ text: "t", author: "a" })
+})
+
+test('fetchQuote returns an empty quote on HTTP error instead of undefined', async () => {
+  global.Log = { error: jest.fn() }
+  global.fetch = jest.fn().mockResolvedValue({ ok: false, status: 500 })
+  const quote = await Module.definitions[moduleName].fetchQuote()
+  expect(quote).toEqual({})
+  expect(global.Log.error).toHaveBeenCalled()
+})

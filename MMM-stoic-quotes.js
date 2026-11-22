@@ -82,11 +82,16 @@ Module.register("MMM-stoic-quotes", {
   },
   fetchQuote: async function() {
     try {
-      const response = await fetch('https://stoic-quotes.com/api/quote');
-      const responseData = await response.json();
-      return responseData;
+      // Use www directly: the apex domain answers with a 307 redirect that has
+      // no CORS header, so the browser blocks the request.
+      const response = await fetch('https://www.stoic-quotes.com/api/quote');
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      return await response.json();
     } catch (error) {
-      console.error('Fetch error:', error);
+      Log.error(`[MMM-stoic-quotes] Fetch error: ${error}`);
+      return {};
     }
   }
 })
